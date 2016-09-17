@@ -4,7 +4,7 @@
   "description": "Basic front-end dev boilerplate",
   "main": "src/client/index.js",
   "scripts": {
-    "client-dev": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
+    "rendu": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,7 @@
   "author": "Antoine Barbaroux",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.14.0",
     "ramda": "^0.22.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

@@ -5,20 +5,27 @@ import { Provider } from 'react-redux'
 
 // import * as reducers from './dux/index'
 // const rootReducer = combineReducers(reducers)
-import { reducer } from './dux/placeholder'
+import { reducer } from './reducers/index'
 
 import App from './components/app'
 
+const stateMap ={
+  visibility: {
+    income: false,
+    outcome: true
+  },
+  categories: [],
+  transactions: []
+}
+
 //createStore(reducer, [preloadedState], [enhancer])
-const rootStore = createStore(
+const store = createStore(
   reducer,
-  {
-    placeholder: 'value'
-  }
+  stateMap
 );
 
 render(
-  <Provider store={rootStore}>
+  <Provider store={store}>
     <App/>
   </Provider>,
   document.getElementById('app'));

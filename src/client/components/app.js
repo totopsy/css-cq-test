@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 
 import { identity as mapStateToProps } from 'ramda'
 
-const App = ({ placeholder }) => <div>{ placeholder }</div>
+import Filter from './filter'
+
+const App = ({visibility, categories, transactions}) => {
+  // console.log(visibility);
+  return (<div>
+      <Filter status={ visibility }/>
+    </div>)
+}
 
 export default connect(mapStateToProps)(App);

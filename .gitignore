@@ -36,3 +36,6 @@ plugins
 
 #Sass
 .sass-cache
+
+#Sublie text temporary files
+._*
