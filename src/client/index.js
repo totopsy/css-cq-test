@@ -1,11 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { combineReducers, createStore } from 'redux'
+import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // import * as reducers from './dux/index'
 // const rootReducer = combineReducers(reducers)
-import { reducer } from './reducers/index'
+import reducer from './reducers/index'
 
 import App from './components/app'
 

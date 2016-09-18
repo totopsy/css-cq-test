@@ -6,8 +6,8 @@ const Filter = ({ status }) => {
   // console.log(status)
   return (
     <form>
-      <Checkbox handleChange={ console.log } status={ status.income } text={ 'placeholder' }/>
-      <Checkbox handleChange={ console.log } status={ status.outcome } text={ 'placeholder' }/>
+      <Checkbox handleChange={ console.log } status={ status.income } name={ 'income' }/>
+      <Checkbox handleChange={ console.log } status={ status.outcome } name={ 'outcome' }/>
     </form>)
 }
 

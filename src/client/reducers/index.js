@@ -1,6 +1,8 @@
-export const reducer = (state = [], action) => {
-  switch (action.type) {
-    default:
-      return state
-  }
-}
+import visibility from './visibility'
+import categories from './categories'
+import transactions from './transactions'
+import { combineReducers } from 'redux'
+
+const reducer = combineReducers({ visibility, categories, transactions })
+
+export default reducer

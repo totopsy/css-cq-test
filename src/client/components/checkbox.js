@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Checkbox = ({handleChange, status, text}) => {
+const Checkbox = ({handleChange, status, name}) => {
   console.log(handleChange)
   return(
     <div>
-      <input type="checkbox" checked={ status } onChange={ handleChange }/>
-      { text }
+      <input type="checkbox" checked={ status } onChange={ handleChange(name) }/>
+      { name }
     </div>
   )
 }
