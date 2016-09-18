@@ -4,11 +4,11 @@ const Checkbox = ({ onCheck, status, name}) => {
   console.log(status);
   return(
     <div>
-      <input
+      <span><input
         defaultChecked={ status }
         onChange={ onCheck(name) }
-        type="checkbox"/>
-      <div>{ name }</div>
+        type="checkbox"/></span>
+      <span>{ name }</span>
     </div>
   )
 }

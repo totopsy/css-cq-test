@@ -1,12 +1,15 @@
 import { createSelector } from 'reselect'
-import { prop, merge } from 'ramda'
+import { prop, map, merge } from 'ramda'
 
-const getFilter = createSelector(prop('filter'))
-const getCategories = createSelector(prop('categories'))
-const getTransactions = createSelector(prop('transactions'))
+const getFilter = prop('filter')
+const getCategories = prop('categories')
+const getTransactions = prop('transactions')
 
-const index = createSelector(
+const getVisible = createSelector(
   [getFilter, getCategories, getTransactions],
-  merge)
+  (filter, categories, transactions) => {
+    console.log('computing');
+    return {filter, computed: []};
+  })
 
-export default index
+export default getVisible
