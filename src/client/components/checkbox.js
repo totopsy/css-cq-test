@@ -6,7 +6,7 @@ const Checkbox = ({ onCheck, status, name}) => {
     <div>
       <span><input
         defaultChecked={ status }
-        onChange={ onCheck(name) }
+        onChange={ () => onCheck(name) }
         type="checkbox"/></span>
       <span>{ name }</span>
     </div>

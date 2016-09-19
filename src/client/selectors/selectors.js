@@ -1,6 +1,10 @@
-import { createSelector } from 'reselect'
-import { prop, map, merge } from 'ramda'
+import { createSelector }
+  from 'reselect'
 
+import { compose, defaultTo, prop, map, merge }
+  from 'ramda'
+
+// const getSub = state => R.prop('sub')(state)
 const getFilter = prop('filter')
 const getCategories = prop('categories')
 const getTransactions = prop('transactions')
@@ -8,7 +12,7 @@ const getTransactions = prop('transactions')
 const getVisible = createSelector(
   [getFilter, getCategories, getTransactions],
   (filter, categories, transactions) => {
-    console.log('computing');
+    console.log('filtering data');
     return {filter, computed: []};
   })
 

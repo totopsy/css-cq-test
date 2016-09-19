@@ -1,4 +1,4 @@
-import { SET_FILTER } from '../actions/filter'
+import { SET_FILTER, TOGGLE } from '../actions/filter'
 
 const defaultFilter = {
   income: false,
@@ -8,6 +8,8 @@ const defaultFilter = {
 const reducer = (state = defaultFilter, action) => {
   switch (action.type) {
     case SET_FILTER:
+      return action.filter
+    case TOGGLE:
       return action.filter
     default:
       return state

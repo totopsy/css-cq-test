@@ -9,31 +9,21 @@ import createLogger from 'redux-logger'
 // const rootReducer = combineReducers(reducers)
 import reducer from './reducers/index'
 
-import mapStateToProps from './selectors/index'
+import mapStateToProps from './utils/selectors'
 
 import App from './components/app'
 
-// const stateMap ={
-//   filter: {
-//     income: false,
-//     outcome: true
-//   },
-//   categories: [],
-//   transactions: []
-// }
+import { test } from './utils/api'
+test();
 
-//createStore(reducer, [preloadedState], [enhancer])
 const store = createStore(
   reducer,
   applyMiddleware(createLogger())
 );
 
 // store test
-import { setFilter } from './actions/filter';
-store.dispatch(setFilter({
-  income: true,
-  outcome: true
-}))
+import { setFilter } from './actions/filter'
+store.dispatch(setFilter({income:true,outcome:false}))
 
 render(
   <Provider store={store}>

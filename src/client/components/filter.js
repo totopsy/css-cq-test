@@ -1,18 +1,21 @@
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { getFilter as mapStateToProps } from '../utils/selectors'
+import { toggle } from '../actions/filter'
 
 import Checkbox from './checkbox'
 
-const Filter = ({ status }) => {
-  // console.log(status)
-  return (
-    <form>
-      <Checkbox onCheck={ console.log } status={ status.income } name={ 'income' }/>
-      <Checkbox onCheck={ console.log } status={ status.outcome } name={ 'outcome' }/>
-    </form>)
-}
+const Filter = ({ status, toggle }) => (
+  <form>
+    <Checkbox onCheck={ toggle } status={ status.income } name={ 'income' }/>
+    <Checkbox onCheck={ toggle } status={ status.outcome } name={ 'outcome' }/>
+  </form>)
 
 Filter.PropTypes = {
-  status: React.PropTypes.object.isRequired
+  filter: React.PropTypes.object.isRequired
 }
 
-export default Filter
+export default connect(
+  mapStateToProps,
+  { toggle })(Filter)

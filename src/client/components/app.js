@@ -2,19 +2,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // import { identity as mapStateToProps } from 'ramda'
-import mapStateToProps from '../selectors/index'
+import mapStateToProps from '../utils/selectors'
 
 import Filter from './filter'
 import List from './list'
 
-const App = ({ filter, computed }) => {
-  // console.log(filter);
-  return (
-    <div>
-      <Filter status={ filter } />
-      <List data={ computed } />
-    </div>)
-}
+const App = ({ filter, computed }) => (
+  <div>
+    <Filter status={ filter } />
+    <List data={ computed } />
+  </div>)
 
 App.propTypes = {
   filter: React.PropTypes.object.isRequired,
