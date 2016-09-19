@@ -7,7 +7,6 @@ const ListItem = ({ name, value }) => (console.log(value),
   </li>)
 
 ListItem.propTypes = {
-  id: React.PropTypes.number.isRequired,
   name: React.PropTypes.string.isRequired,
   value: React.PropTypes.number.isRequired,
 }

@@ -1,13 +1,13 @@
 import { getCategories } from '../utils/api'
 
-import R from 'ramda'
+import { compose, fromPairs, map } from 'ramda'
 
 export const CATEGORIES_LOADED = 'CATEGORIES_LOADED'
 
 export const categoriesLoaded = categories => ({
   type: CATEGORIES_LOADED,
   // categories
-  categories: R.compose(R.fromPairs, R.map( (cat) => [cat._id, cat.name]))(categories)
+  categories: compose(fromPairs, map( (cat) => [cat._id, cat.name]))(categories)
 })
 
 export const loadCategories = () => dispatch => {
