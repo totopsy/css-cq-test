@@ -8,8 +8,8 @@ import Checkbox from './checkbox'
 
 const Filter = ({ status, toggle }) => (
   <form>
-    <Checkbox onCheck={ toggle } status={ status.income } name={ 'income' }/>
-    <Checkbox onCheck={ toggle } status={ status.outcome } name={ 'outcome' }/>
+    <Checkbox onCheck={ toggle } status={ status } name={ 'income' }/>
+    <Checkbox onCheck={ toggle } status={ status } name={ 'outcome' }/>
   </form>)
 
 Filter.PropTypes = {

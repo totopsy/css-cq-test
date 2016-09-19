@@ -5,6 +5,8 @@ export const getFilter = prop('filter')
 const getCategories = prop('categories')
 const getTransactions = prop('transactions')
 
+// const getId = prop('id')
+
 const computeVisible = () => (
   [
     {id: 42, name: 'placeholder', value: 1337},

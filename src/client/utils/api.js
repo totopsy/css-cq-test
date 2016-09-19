@@ -13,9 +13,8 @@ const apiGet = (endpoint, cb = identity) => get(`${API_URL}/${endpoint}`)
   .then(({ data }) => (cb(data), data))
   .catch(cb)
 
-const getCategories = cb => apiGet(CAT, cb)
-
-const getTransactions = cb => apiGet(TRA, cb)
+export const getCategories = cb => apiGet(CAT, cb)
+export const getTransactions = cb => apiGet(TRA, cb)
 
 // test stuff
 import { __, compose as c, length } from 'ramda'

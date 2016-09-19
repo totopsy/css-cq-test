@@ -3,6 +3,10 @@ import { render } from 'react-dom'
 import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 
+import { getCategories, getTransactions } from './utils/api'
+import { setCategories } from './actions/categories'
+import { setTransactions } from './actions/transactions'
+
 import createLogger from 'redux-logger'
 
 // import * as reducers from './dux/index'
@@ -21,9 +25,9 @@ const store = createStore(
   applyMiddleware(createLogger())
 );
 
-// store test
-import { setFilter } from './actions/filter'
-store.dispatch(setFilter({income:true,outcome:false}))
+// populating store
+getCategories().then(cats => store.dispatch(setCategories(cats)))
+getTransactions().then(trans => store.dispatch(setTransactions(trans)))
 
 render(
   <Provider store={store}>
