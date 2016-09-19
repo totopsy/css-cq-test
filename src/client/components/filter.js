@@ -13,7 +13,8 @@ const Filter = ({ status, toggle }) => (
   </form>)
 
 Filter.PropTypes = {
-  filter: React.PropTypes.object.isRequired
+  status: React.PropTypes.object.isRequired,
+  toggle: React.PropTypes.func.isRequired
 }
 
 export default connect(

@@ -1,6 +1,12 @@
-export const SET_TRANSACTIONS = 'SET_TRANSACTIONS'
+import { getTransactions } from '../utils/api'
 
-export const setTransactions = transactions => ({
-  type: SET_TRANSACTIONS,
+export const TRANSACTIONS_LOADED = 'TRANSACTIONS_LOADED'
+
+export const transactionsLoaded = transactions => ({
+  type: TRANSACTIONS_LOADED,
   transactions
 })
+
+export const loadTransactions = () => dispatch => {
+  getTransactions.then(data => dispatch(transactionsLoaded(data)))
+}

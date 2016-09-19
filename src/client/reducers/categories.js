@@ -1,8 +1,8 @@
-import { SET_CATEGORIES } from '../actions/categories'
+import { CATEGORIES_LOADED } from '../actions/categories'
 
 const reducer = (state = [], action) => {
   switch (action.type) {
-    case SET_CATEGORIES:
+    case CATEGORIES_LOADED:
       return action.categories
     default:
       return state

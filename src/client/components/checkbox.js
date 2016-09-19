@@ -5,8 +5,7 @@ import { assoc, not, prop } from 'ramda'
 
 const Checkbox = ({ onCheck, status, name}) => {
   const isChecked = prop(name, status)
-  // console.log(status);
-  // const toggle = () => 
+
   return(
     <div>
       <span><input

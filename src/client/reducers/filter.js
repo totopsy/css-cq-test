@@ -1,18 +1,14 @@
-import { SET_FILTER, TOGGLE } from '../actions/filter'
-
-import { assoc, not, prop } from 'ramda'
+import { TOGGLE } from '../actions/filter'
 
 const defaultFilter = {
-  income: false,
-  outcome: false
+  income: true,
+  outcome: true
 }
 
 const reducer = (state = defaultFilter, action) => {
   switch (action.type) {
-    case SET_FILTER:
-      return filterIn(action)
     case TOGGLE:
-      return assoc(action.filter, not(prop(action.filter, state)), state)
+      return {...state, [action.filter]: !state[action.filter]}
     default:
       return state
   }

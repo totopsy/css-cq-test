@@ -1,8 +1,8 @@
-import { SET_TRANSACTIONS } from '../actions/transactions'
+import { TRANSACTIONS_LOADED } from '../actions/transactions'
 
 const reducer = (state = [], action) => {
   switch (action.type) {
-    case SET_TRANSACTIONS:
+    case TRANSACTIONS_LOADED:
       return action.transactions
     default:
       return state
