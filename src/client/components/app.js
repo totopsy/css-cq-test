@@ -16,8 +16,6 @@ const App = ({ filter, computed }) => (
 App.propTypes = {
   filter: React.PropTypes.object.isRequired,
   computed: React.PropTypes.array.isRequired
-  // categories: React.PropTypes.array.isRequired,
-  // transactions: React.PropTypes.array.isRequired
 }
 
 export default connect(mapStateToProps)(App);

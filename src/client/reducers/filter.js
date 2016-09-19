@@ -7,15 +7,12 @@ const defaultFilter = {
   outcome: false
 }
 
-const filterIn = prop('filter')
-// const negProp = name => assoc(name, not(prop(name)))
-
 const reducer = (state = defaultFilter, action) => {
   switch (action.type) {
     case SET_FILTER:
       return filterIn(action)
     case TOGGLE:
-      return assoc(filterIn(action), not(prop(filterIn(action), state)), state)
+      return assoc(action.filter, not(prop(action.filter, state)), state)
     default:
       return state
   }

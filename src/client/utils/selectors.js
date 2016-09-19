@@ -7,9 +7,11 @@ const getTransactions = prop('transactions')
 
 // const getId = prop('id')
 
+
 const computeVisible = () => (
   [
     {id: 42, name: 'placeholder', value: 1337},
+    {id: 3, name: 'tes3', value: 2},
     {id: 0, name: 'test', value: 0}
   ]
 )
