@@ -39,3 +39,4 @@ plugins
 
 #Sublie text temporary files
 ._*
+.DS_Store

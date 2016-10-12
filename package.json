@@ -1,9 +1,10 @@
 {
-  "name": "front-boilerplate",
+  "name": "csscqtest",
   "version": "0.0.1",
-  "description": "Basic front-end dev boilerplate",
+  "description": "",
   "main": "src/client/index.js",
   "scripts": {
+    "dev": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
     "rendu": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,7 +19,7 @@
     "babel",
     "es6"
   ],
-  "author": "Antoine Barbaroux",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.14.0",
