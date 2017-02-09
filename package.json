@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/client/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
+    "dev": "webpack-dev-server --colors --content-base public/ --hot --inline --host 0.0.0.0 --port 8877",
     "rendu": "webpack-dev-server --colors --content-base public/ --hot --inline --host 127.0.0.1 --port 8877",
     "build": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
